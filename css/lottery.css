@@ -2,6 +2,19 @@ body,
 html {
     font: 14px/1.5 "PingFang SC", "Microsoft YaHei", Helvetica, "Helvetica Neue", Tahoma, Arial, sans-serif;
 }
+* {
+    opacity: 0.96;
+}
+
+body {
+    background: url('../img/bg5.jpg') no-repeat;
+}
+
+.upper {
+    margin: 0 30%;
+    padding-bottom: 2%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
 
 h1 {
     text-align: center;
@@ -10,8 +23,23 @@ h1 {
 
 ul {
     list-style: none;
-    padding-left: 39%;
+    margin: 0 10%;
+    padding: 0;
     font-size: 12px;
+    background-color: rgba(220, 110, 40, 0.3);
+    display: none;
+}
+
+li {
+    padding-left: 15%;
+}
+
+.prizePanel {
+    background-color: rgba(153, 35, 35, 0.3);
+    border: 2px solid rgb(153, 35, 35);
+    margin: 0 10%;
+    text-align: center;
+    cursor: pointer;
 }
 
 .hide {
@@ -26,7 +54,7 @@ ul {
     padding: .5%;
     max-width: 324px;
     max-height: 324px;
-    margin: 1.5% auto;
+    margin: 3% auto;
 }
 
 .ibox {
@@ -62,13 +90,17 @@ ul {
 }
 
 .light {
-    background-color: red;
+    background-color: #f57;
 }
 
 .light:hover {
-    background-color: #f57;
+    background-color: red;
 }
 
 .lottery-result {
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+    color: red;
 }
+

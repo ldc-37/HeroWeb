@@ -1,6 +1,9 @@
 let PrizeList = new Object ();
         
 $(function () {
+    $('.prizePanel').click(function () {
+        $('#prizeList').slideToggle('slow');
+    })
     
     GetPrize ();
     ShowPrize ();
@@ -37,7 +40,7 @@ function ShowPrize () {
 }
 
 function GetLottery () {
-    $('.lottery-result').addClass('hide');
+    $('.lottery-result').fadeOut('slow');
     $.ajax ({
         type: "POST",
         url: "https://api.hack.rtxux.xyz/prize/get",
@@ -61,8 +64,9 @@ function GetLottery () {
                             if ($('.ibox')[a[i%8]].innerText == prize) {
                                 $('.ibox')[a[i%8]].className += ' light';
                                 clearInterval(keyCycle);
-                                $('.lottery-result').removeClass('hide');
-                                $('#lottery-resultText').text(`恭喜您抽中 "${prize}" 一个！`);
+                                // $('.lottery-result').removeClass('hide');
+                                $('.lottery-result').fadeIn('slow');
+                                $('#lottery-resultText').text(`恭喜您抽中 "${prize}" ！`);
                             }
                             else{
                                 $('.ibox')[a[i%8]].className += ' light';

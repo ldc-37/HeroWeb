@@ -8,10 +8,10 @@
     <link rel="shortcut icon" href="favicon.ico"/>
     <style>
         body,html {font: 14px/1.5 "PingFang SC","Microsoft YaHei",Helvetica,"Helvetica Neue",Tahoma,Arial,sans-serif;}
-        a {margin: 0 auto;font-size: 18px;color: black;box-shadow: 0px 0px 20px 6px gold;background-color: gold;}
-        em {font-size: 24px;font-style: normal;color: red;}
-        .rule {width: 80%;margin: 0 auto;text-align: center;}
-        #link {text-align: center;}
+        body {background: url('./img/bg3.jpg') repeat;overflow-y: hidden;}
+        em {font-size: 18px;font-style: normal;color: red;}
+        .rule {margin: 13% auto;padding: .3%;text-align: center;background: rgba(255, 255, 0, 0.3)}
+        #link {text-align: center;cursor: pointer;margin: -2% 40%;}
     </style>
 </head>
 <body>
@@ -20,16 +20,12 @@
         <p>*每次答题的题目为随机抽取的6道问题，全部答对可参与抽奖*</p>
         <p>*在活动期限内，您可以不限次数参与答题*</p>
         <p>*活动期限：即日起至4月21日*</p>
-        <p>**答题限时1分钟**</p>
-        <p><em>↓↓↓戳链接啊，还等什么？↓↓↓</em></p>
+        <p><em>**答题限时1分钟**</em></p>
+        <p id="link"><img src="./img/start.jpg" onclick='javascript:window.open("./quiz.html","_self")' width="140px" height="140px"></p>
     </div>
-    <p id="link"><a href="./quiz.html">>>>进入游戏<<<</a></p>
 
-        <!-- 唉我实在是太菜了 只会用center标签来居中这样子才能写页面 -->
-        <br><br><br><br><br><br>
-        <center>Android Github : https://github.com/Xily9/HeroApp</center>
-        <center>后端 Github : https://github.com/RTXUX/HeroServer</center>
-        <center>前端 Github : https://github.com/ldc-37/HeroWeb</center>
+
+    <!-- 唉我实在是太菜了 只会用center标签来居中这样子才能写页面 -->
         <center style="background-color: gray;color: white;position: fixed;bottom: 0;left: 40.2%;">&nbsp;Powered by Team <span style="background: black;">&lt;script&gt;alert('xss')&lt;/script&gt;&nbsp;</span></center>
 </body>
 </html>

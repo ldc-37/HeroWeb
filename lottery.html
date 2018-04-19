@@ -10,23 +10,27 @@
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <body>
-<h1>欢迎进行抽奖</h1>
-<ul id="prizeList"></ul>
-<div class="box">
-    <div class="ibox">未中奖</div>
-    <div class="ibox">未中奖</div>
-    <div class="ibox">未中奖</div>
-    <div class="ibox">未中奖</div>
-    <div class="ibox"><button class="btn" onclick="GetLottery ()">·开始抽奖·</button></div>
-    <div class="ibox">未中奖</div>
-    <div class="ibox">未中奖</div>
-    <div class="ibox">未中奖</div>
-    <div class="ibox">未中奖</div>
-</div>
-<div class="lottery-result hide">
-    <h3>抽奖结果：</h3>
-    <p id="lottery-resultText"></p>
-</div>
+    <div class="upper">
+        <h1>欢迎进行抽奖</h1>
+        <div class="prizePanel">点击查看奖项</div>
+        <ul id="prizeList"></ul>
+        <div class="box">
+            <div class="ibox">未中奖</div>
+            <div class="ibox">未中奖</div>
+            <div class="ibox">未中奖</div>
+            <div class="ibox">未中奖</div>
+            <div class="ibox"><button class="btn" onclick="GetLottery ()">·开始抽奖·</button></div>
+            <div class="ibox">未中奖</div>
+            <div class="ibox">未中奖</div>
+            <div class="ibox">未中奖</div>
+            <div class="ibox">未中奖</div>
+        </div>
+        <div class="lottery-result hide">
+            <img src="./img/star.png" width="115px" height="55px" style="display: inline-block;">
+            <h3>抽奖结果：</h3>
+            <p id="lottery-resultText"></p>
+        </div>
+    </div>
 
     <script src="./js/errorCheck.js"></script>
     <script src="./js/cookie.js"></script>

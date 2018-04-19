@@ -11,14 +11,14 @@ $(function () {
     let t = 60;
     let timer = setInterval(() => {
         $('#t-num').text(--t);
-        $('.time').css('border','2px solid black');
         $('.container').css('border','3px solid black');
-        if (t <= 30 && t % 2 == 0) {
-            $('.time').css('border','2px solid red');
-            $('.container').css('border','3px solid red');
+        $('.timeline-left').css('width',t / 0.6 + '%');
+        if (t <= 30) {
+            $('.time').css('color','red');
+            $('.timeline-left').css('background','-webkit-linear-gradient(#ff5555,#de5555)');
         }
-        if (t <= 10) {
-            $('.time').css('background-color','red');
+        if (t <= 10 && t % 2 == 0) {
+            $('.container').css('border','3px solid red');
         }
         if (t == 0) {
             alert('回答超时！');
