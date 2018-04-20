@@ -4,7 +4,8 @@ html {
 }
 
 body {
-    background: url('../img/bg2.png') repeat;
+    background: url('../img/bg6.jpg');
+    display: none;
 }
 
 .info h2 {
@@ -24,6 +25,7 @@ em {
     border-radius: 25px 2px 2px 2px;
     display: flex;
     background-color: white;
+    opacity: 0.86;
 }
 
 .time {
@@ -52,7 +54,8 @@ em {
 }
 
 #q-num {
-    color: red;
+    color: orange;
+    text-decoration: underline;
 }
 
 .info {
@@ -93,7 +96,7 @@ em {
 }
 
 .option:hover {
-    border: 2px dashed #6fb2e5;
+    border: 2px solid #6fb2e5;
 }
 
 .option-selected {
@@ -152,6 +155,7 @@ button {
     margin: 0 auto;
     border: 3px solid black;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 #resultText {

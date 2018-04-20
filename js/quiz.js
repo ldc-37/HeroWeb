@@ -1,30 +1,34 @@
 'use strict'
 $(function () {
+    setTimeout(() => {
+        $('body').fadeIn(1500);
+    },500); // avoid passing of animation due to network
     const options = document.getElementsByClassName('option');
     for(let i = 0;i < options.length;++i) {
         options[i].addEventListener('click', function () {
             ClearStyle();
             options[i].className += ' option-selected';
-        })
+        });
     }
 
     let t = 60;
     let timer = setInterval(() => {
-        $('#t-num').text(--t);
+        t = Math.round((t - 0.01) * 100) / 100;
+        $('#t-num').text(Math.floor(t * 10) / 10);
         $('.container').css('border','3px solid black');
         $('.timeline-left').css('width',t / 0.6 + '%');
         if (t <= 30) {
             $('.time').css('color','red');
             $('.timeline-left').css('background','-webkit-linear-gradient(#ff5555,#de5555)');
         }
-        if (t <= 10 && t % 2 == 0) {
+        if (t <= 10 && Math.round(t) % 2 == 0) {
             $('.container').css('border','3px solid red');
         }
         if (t == 0) {
             alert('回答超时！');
             window.open('index.html','_self');
         }
-    },1000);
+    },10);
 
 
     $('#btn-pre').click(function () {
@@ -34,11 +38,15 @@ $(function () {
         AnsArr.splice(-1,1);
     });
     $('#btn-next').click(function () {
-        if (SaveOption () == false) {
-            return false;
-        }
-        ShowQuestion ();
-        ClearStyle ();
+        $('.container').fadeTo(300,0.5,function () {
+            if (SaveOption () == false) {
+                return false;
+            }
+            ShowQuestion ();
+            ClearStyle ();
+            $('.container').fadeTo(350,0.86);
+        });
+
     });
     $('#btn-submit').click(function () {
         if (SaveOption () == false) {

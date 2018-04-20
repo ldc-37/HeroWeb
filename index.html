@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>百万英雄，点击即玩！</title>
     <link rel="shortcut icon" href="favicon.ico"/>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <style>
         body,html {font: 14px/1.5 "PingFang SC","Microsoft YaHei",Helvetica,"Helvetica Neue",Tahoma,Arial,sans-serif;}
-        body {background: url('./img/bg3.jpg') repeat;overflow-y: hidden;}
+        body {background: url('./img/bg7.jpg') repeat;overflow-y: hidden;}
         em {font-size: 18px;font-style: normal;color: red;}
-        .rule {margin: 13% auto;padding: .3%;text-align: center;background: rgba(255, 255, 0, 0.3)}
-        #link {text-align: center;cursor: pointer;margin: -2% 40%;}
+        .rule {margin: 13% auto;padding: .3%;text-align: center;background: rgba(255, 255, 255, 0.5)}
+        #link {text-align: center;cursor: pointer;margin: -2% 40%;opacity: 0.5;}
     </style>
 </head>
 <body>
@@ -21,8 +22,24 @@
         <p>*在活动期限内，您可以不限次数参与答题*</p>
         <p>*活动期限：即日起至4月21日*</p>
         <p><em>**答题限时1分钟**</em></p>
-        <p id="link"><img src="./img/start.jpg" onclick='javascript:window.open("./quiz.html","_self")' width="140px" height="140px"></p>
+        <p id="link"><img src="./img/start.jpg" onclick='BtnAnimation ()' width="140px" height="140px"></p>
     </div>
+    <script>
+        $(function () {
+            $('#link').animate({opacity:'0.8'},1500);
+            $('#link').animate({opacity:'0.3'},1500);
+            setInterval(() => {
+                $('#link').animate({opacity:'0.8'},1500);
+                $('#link').animate({opacity:'0.3'},1500);
+            },3000);
+        });
+
+        function BtnAnimation () {
+            $("body").fadeOut(2000,function () {
+                window.open("./quiz.html","_self")
+            });
+        }
+    </script>
 
 
     <!-- 唉我实在是太菜了 只会用center标签来居中这样子才能写页面 -->
